@@ -1,4 +1,3 @@
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
     local cue2 = Instance.new("Sound")
 	cue2.Parent = game.Workspace
 	cue2.Name = "Spawn"
@@ -6,8 +5,6 @@ game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 	cue2.Volume = 9999
 	cue2.PlaybackSpeed = 1
 	cue2:Play()
-wait(0.5)
-
 local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V2/Source.lua"))()
 
 ---====== Create entity ======---
