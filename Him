@@ -14,7 +14,7 @@ local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Regul
 
 local entity = spawner.Create({
 	Entity = {
-		Name = "Chaotic",
+		Name = "him",
 		Asset = "rbxassetid://114440873768242",
 		HeightOffset = 0
 	},
@@ -59,8 +59,8 @@ local entity = spawner.Create({
 	},
 	Death = {
 		Type = "Guiding", -- "Curious"
-		Hints = {"You died to chaotic...", "To survive him, hide and wait for him to despawn.", "He can rebound up to 2 or 3 times.", "Goodluck next time."},
-		Cause = ""
+		Hints = {"You died to him...", "To survive him, hide and wait for him to despawn.", "!!!!!!!!!!!!!!!!!.", "Goodluck next time."},
+		Cause = "him"
 	}
 })
 
