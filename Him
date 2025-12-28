@@ -1,3 +1,5 @@
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(0.5)
     local cue2 = Instance.new("Sound")
 	cue2.Parent = game.Workspace
 	cue2.Name = "Spawn"
@@ -126,4 +128,74 @@ end)
 
 entity:Run()
     end
+end)()
+
+-- eyes nightmare in one room
+ 
+coroutine.wrap(function()
+ 
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
+ 
+    wait(1)
+
+game.Players.LocalPlayer.PlayerGui.MainUI.Jumpscare.Jumpscare_Eyes.BackgroundColor3 = Color3.fromRGB(255, 0, 55)
+ 
+    if game.Workspace:FindFirstChild("Eyes") then
+ 
+game.Workspace.Eyes.Core.Attachment.EyesParticle.Color = ColorSequence.new({
+ 
+            ColorSequenceKeypoint.new(0, Color3.new(1, 0.305881, 0.305881)),
+ 
+            ColorSequenceKeypoint.new(0.305881, Color3.new(1, 0.305881, 0.305881)),
+ 
+            ColorSequenceKeypoint.new(0.305881, Color3.new(1, 0.305881, 0.305881)),
+ 
+            ColorSequenceKeypoint.new(1, Color3.new(1, 0.305881, 0.305881)),
+ 
+        })
+ 
+		--
+ 
+game.Workspace.Eyes.Core.Ambience.PlaybackSpeed = 0.9
+
+    end
+
+end)
+ 
+--
+
+if game:GetService("ReplicatedStorage").GameData.Floor.Value == "Fools" then
+
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
+ 
+    wait(1)
+ 
+    if game.Workspace:FindFirstChild("Eyes") then
+ 
+game.Workspace.Eyes.Core.Attachment.EyesParticle.Color = ColorSequence.new({
+ 
+            ColorSequenceKeypoint.new(0, Color3.new(1, 0.305881, 0.305881)),
+ 
+            ColorSequenceKeypoint.new(0.305881, Color3.new(1, 0.305881, 0.305881)),
+ 
+            ColorSequenceKeypoint.new(0.305881, Color3.new(1, 0.305881, 0.305881)),
+ 
+            ColorSequenceKeypoint.new(1, Color3.new(1, 0.305881, 0.305881)),
+ 
+        })
+ 
+		--
+ 
+game.Workspace.Eyes.Core.Ambience.PlaybackSpeed = 0.9
+
+    end
+
+end)
+ 
+--
+
+--[[ ]]--
+
+end
+ 
 end)()
