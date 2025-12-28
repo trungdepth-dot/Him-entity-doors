@@ -5,59 +5,62 @@
 	cue2.Volume = 9999
 	cue2.PlaybackSpeed = 1
 	cue2:Play()
+if game.Workspace:FindFirstChild("SeekMovingNewClone") then return end
+---====== Load spawner ======---
+
 local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V2/Source.lua"))()
 
 ---====== Create entity ======---
 
 local entity = spawner.Create({
 	Entity = {
-		Name = "Him",
+		Name = "Chaotic",
 		Asset = "rbxassetid://114440873768242",
 		HeightOffset = 0
 	},
 	Lights = {
 		Flicker = {
 			Enabled = true,
-			Duration = 1
+			Duration = 4
 		},
-		Shatter = true,
+		Shatter = false,
 		Repair = false
 	},
 	Earthquake = {
-		Enabled = true
+		Enabled = false
 	},
 	CameraShake = {
 		Enabled = true,
-		Range = 100,
-		Values = {1.5, 20, 0.1, 1} -- Magnitude, Roughness, FadeIn, FadeOut
+		Range = 50,
+		Values = {100, 30, 0.1, 0.1} -- Magnitude, Roughness, FadeIn, FadeOut
 	},
 	Movement = {
-		Speed = 450,
-		Delay = 2,
+		Speed = 195,
+		Delay = 3,
 		Reversed = false
 	},
 	Rebounding = {
 		Enabled = true,
 		Type = "Ambush", -- "Blitz"
 		Min = 6,
-		Max = 8,
+		Max = 9,
 		Delay = 0
 	},
 	Damage = {
 		Enabled = true,
-		Range = 75,
+		Range = 50,
 		Amount = 125
 	},
 	Crucifixion = {
 		Enabled = true,
-		Range = 60,
+		Range = 40,
 		Resist = false,
 		Break = true
 	},
 	Death = {
 		Type = "Guiding", -- "Curious"
-		Hints = {"You died to Him...", "He so fast!","!!!!!!!!!!!!!!"},
-		Cause = "Him"
+		Hints = {"You died to chaotic...", "To survive him, hide and wait for him to despawn.", "He can rebound up to 2 or 3 times.", "Goodluck next time."},
+		Cause = ""
 	}
 })
 
@@ -125,5 +128,3 @@ end)
 ---====== Run entity ======---
 
 entity:Run()
-    end
-end)()
